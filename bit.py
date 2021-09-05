@@ -11,4 +11,6 @@ for bit in range(1<<n):
             sum += a[i]
     
     if sum == w:
-        print(bin(bit))
+        print(bit)
+
+# 01101
