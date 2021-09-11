@@ -1,5 +1,6 @@
 from util.measure_time import measure
 
+memo = [-1]*50
 
 def tribonacci(N):
     if N == 0 or N == 1:
@@ -8,7 +9,11 @@ def tribonacci(N):
     if N == 2:
         return 1
 
-    return tribonacci(N-1) + tribonacci(N-2) + tribonacci(N-3)
+    if memo[N] != -1:
+        return memo[N]
+
+    memo[N] = tribonacci(N-1) + tribonacci(N-2) + tribonacci(N-3)
+    return memo[N]
 
 @measure
 def call(N):
