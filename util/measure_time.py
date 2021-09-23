@@ -5,7 +5,7 @@ def measure(func):
         t1 = time.time()
         result = func(*args, **kwargs)
         t2 = time.time()
-        print(f"{(t2 - t1):.4f}s")
+        print(f"{(t2 - t1):.8f}s")
         return result
     return inner
 

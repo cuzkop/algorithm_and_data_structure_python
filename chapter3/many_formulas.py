@@ -13,7 +13,7 @@ for bit in range(1<<(N-1)):
   for i in range(N-1):
     tmp *= 10
     tmp += int(S[i])
-    print(tmp)
+    # print(tmp)
  
     if bit & (1<<i):
       tot += tmp
@@ -21,9 +21,9 @@ for bit in range(1<<(N-1)):
   
   tmp *= 10
   tmp += int(S[N-1])
-  print(tmp)
+#   print(tmp)
   tot += tmp
-  print(tot)
-  print("-"*10)
+#   print(tot)
+#   print("-"*10)
  
 print(tot)
